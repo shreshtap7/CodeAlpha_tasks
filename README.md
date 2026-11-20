@@ -1,7 +1,7 @@
 # CodeAlpha_tasks
 # CodeAlpha Python Programming Internship
 
-This repository contains my submissions for the **Python Programming Internship at [CodeAlpha](https://www.codealpha.tech)**. It includes four beginner-friendly console projects that cover core Python concepts such as loops, dictionaries, functions, file handling and string processing.
+This repository contains my submissions for the **Python Programming Internship at [CodeAlpha](https://www.codealpha.tech)**. It includes four beginner-friendly console projects that cover core Python concepts such as loops, dictionaries, functions, file handling and string processing..
 
 ## Projects
 
