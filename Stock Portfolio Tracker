@@ -1,0 +1,82 @@
+STOCK_PRICES = {
+    "AAPL": 180,
+    "TSLA": 250,
+    "GOOGL": 140,
+    "MSFT": 330,
+    "AMZN": 125,
+}
+
+
+def get_portfolio():
+    portfolio = {}
+
+    print("Available stocks:", ", ".join(STOCK_PRICES))
+    print("Enter stock name and quantity. Type 'done' when finished.\n")
+
+    while True:
+        name = input("Stock name: ").upper().strip()
+
+        if name == "DONE":
+            break
+
+        if name not in STOCK_PRICES:
+            print("Stock not found. Please choose from the available stocks.\n")
+            continue
+
+        try:
+            quantity = int(input("Quantity: "))
+        except ValueError:
+            print("Please enter a valid whole number.\n")
+            continue
+
+        if quantity <= 0:
+            print("Quantity must be greater than zero.\n")
+            continue
+
+        portfolio[name] = portfolio.get(name, 0) + quantity
+        print(f"Added {quantity} share(s) of {name}.\n")
+
+    return portfolio
+
+
+def calculate_total(portfolio):
+    total = 0
+    lines = []
+
+    for name, quantity in portfolio.items():
+        value = STOCK_PRICES[name] * quantity
+        total += value
+        lines.append(f"{name}: {quantity} x ${STOCK_PRICES[name]} = ${value}")
+
+    return lines, total
+
+
+def save_to_file(lines, total, filename="portfolio.txt"):
+    with open(filename, "w") as file:
+        for line in lines:
+            file.write(line + "\n")
+        file.write(f"Total Investment: ${total}\n")
+    print(f"Result saved to {filename}")
+
+
+def main():
+    portfolio = get_portfolio()
+
+    if not portfolio:
+        print("No stocks entered.")
+        return
+
+    lines, total = calculate_total(portfolio)
+
+    print("\n--- Portfolio Summary ---")
+    for line in lines:
+        print(line)
+    print(f"Total Investment: ${total}")
+
+    save = input("\nSave result to a file? (y/n): ").lower().strip()
+    if save == "y":
+        save_to_file(lines, total)
+
+
+if __name__ == "__main__":
+    main()
