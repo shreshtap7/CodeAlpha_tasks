@@ -110,8 +110,8 @@ python chatbot.py
 
 1. Clone this repository
    ```bash
-   git clone https://github.com/<your-username>/<your-repo-name>.git
-   cd <your-repo-name>
+   git clone https://github.com/shreshtap7/CodeAlpha_tasks.git
+   cd CodeAlpha_tasks
    ```
 2. Run any project with Python, for example:
    ```bash
@@ -125,6 +125,6 @@ CodeAlpha's Python Programming internship focuses on hands-on practice with Pyth
 ## Author
 
 **POTTOLLA SHRESHTA**
-[LinkedIn](https://www.linkedin.com/) | [GitHub](https://github.com/)
+[LinkedIn](https://www.linkedin.com/in/shreshta-pottolla-ab48503b4)
 
-*Submitted as part of the CodeAlpha Python Programming Internship.*
+*Submitted as part of my CodeAlpha Python Programming Internship.*
